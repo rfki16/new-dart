@@ -6,6 +6,7 @@ void main(){
   int volumekubus = volKubus(7);
   print(volumekubus);
 
+  print('phi ${Nilaiphi()}');
 
 }
 
@@ -16,3 +17,6 @@ void user(nama){
 int volKubus(int sisi){
   return sisi*sisi*sisi;
 }
+
+// arrow function
+double Nilaiphi() => 3.14;
