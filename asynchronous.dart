@@ -1,7 +1,6 @@
 void main(){
   fetchData();
   print('menunggu hasil');
-  
 }
 
 Future<void> fetchData(){
