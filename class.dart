@@ -28,6 +28,13 @@ void main(){
 
   print(rekening3.getPemilik);
   print(rekening3.getBank);
+  print('-----------------');
+
+  RekeningBank tryBank = new RekeningBank.Permata(
+    namaPemilik: 'Andi',
+    saldo: 2000
+  );
+  print(tryBank.getBank);
 
   
 
@@ -69,6 +76,9 @@ class RekeningBank {
 
   // constructor
   RekeningBank({this.namaPemilik, this.namaBank, this.saldo});
+
+  // multiple constructor
+  RekeningBank.Permata({this.namaPemilik, this.namaBank='Permata', this.saldo});
   
   // method
   tarikTunai(){
