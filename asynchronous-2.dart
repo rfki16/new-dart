@@ -5,12 +5,19 @@ Future<void> main() async{
 }
 
 Future<String> printData() async{
-  var data = await fetchData();
+  try{
+    var data = await fetchData();
   return 'data $data';
+    
+  }
+  catch(err){
+    return err.toString();
+  }
+  
 }
 
 Future<String> fetchData(){
   return Future.delayed(
-    Duration(seconds: 2),() => 'Fetch Data'
+    Duration(seconds: 2),() => throw('data gagal ditambahkan')
   );
 }
